@@ -5,14 +5,9 @@ import 'package:loginprovider/src/pages/HomePage/model.dart';
 import 'package:loginprovider/src/pages/HomePage/provider.dart';
 import 'package:provider/provider.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   HomePage({Key key}) : super(key: key);
 
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return FutureProvider<AllProductsModel>(
