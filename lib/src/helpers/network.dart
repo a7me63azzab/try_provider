@@ -13,7 +13,7 @@ class NetWork {
 
     if (headers != null) dio.options.headers = headers;
 
-    Response response = await dio.get('/$url').catchError((err) {});
+    Response response = await dio.get('$url').catchError((err) {});
     if (response.statusCode >= 200 && response.statusCode < 300) {
       jsonResponse = json.decode(response.toString());
       return jsonResponse;

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loginprovider/src/pages/HomePage/provider.dart';
 import 'package:loginprovider/src/pages/HomePage/view.dart';
 import 'package:loginprovider/src/pages/LoginPage/provider.dart';
 import 'package:provider/provider.dart';
@@ -53,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
     await Navigator.of(context).push(
       MaterialPageRoute(
         fullscreenDialog: true,
-        builder: (_) => HomePage(),
+        builder: (context) => HomePage(),
       ),
     );
   }
@@ -125,7 +126,8 @@ class _LoginPageState extends State<LoginPage> {
                     )
                   : CupertinoButton.filled(
                       child: Text("Login"),
-                      onPressed: () => _loginSubmitted(context, loginProvider),
+                      onPressed: () =>
+                          _loginSubmitted(context, loginProvider),
                     )
             ],
           ),
